@@ -1,0 +1,285 @@
+[
+    {
+        "fecha": "2025-01-10",
+        "cliente": "Juan Pérez",
+        "estado": "pendiente",
+        "id": 1,
+        "productos": [
+            {
+                "descripcion": "AMD Ryzen 7, 16GB RAM, SSD 512GB",
+                "precio": 3500,
+                "id": 1,
+                "nombre": "Laptop Gamer"
+            },
+            {
+                "descripcion": "8000 DPI, batería recargable",
+                "precio": 75.9,
+                "id": 3,
+                "nombre": "Mouse Inalámbrico"
+            }
+        ]
+    },
+    {
+        "fecha": "31/08/2025",
+        "cliente": "edwin",
+        "estado": "pendiente",
+        "id": 2,
+        "productos": []
+    },
+    {
+        "fecha": "31/08/2025",
+        "cliente": "edwin",
+        "estado": "pendiente",
+        "id": 3,
+        "productos": [
+            {
+                "descripcion": "Switch Red, retroiluminación multicolor",
+                "precio": 159,
+                "id": 2,
+                "nombre": "Teclado Mecánico RGB"
+            },
+            {
+                "descripcion": "Cancelación de ruido, batería 30h",
+                "precio": 129.99,
+                "id": 4,
+                "nombre": "Audífonos Bluetooth"
+            }
+        ]
+    },
+    {
+        "fecha": "12.05.02",
+        "cliente": "carlos",
+        "estado": "en proceso",
+        "id": 12,
+        "productos": [{
+            "descripcion": "Full HD, 75Hz",
+            "precio": 499,
+            "id": 5,
+            "nombre": "Monitor LED 24''"
+        }]
+    },
+    {
+        "fecha": "12.05.25",
+        "cliente": "carlos",
+        "estado": "pendiente",
+        "id": 24,
+        "productos": [{
+            "descripcion": "Full HD, 75Hz",
+            "precio": 499,
+            "id": 5,
+            "nombre": "Monitor LED 24''"
+        }]
+    },
+    {
+        "fecha": "12.1.2",
+        "cliente": "dabi",
+        "estado": "en proceso",
+        "id": 28,
+        "productos": [{
+            "descripcion": "Switch Red, retroiluminación multicolor",
+            "precio": 159,
+            "id": 2,
+            "nombre": "Teclado Mecánico RGB"
+        }]
+    },
+    {
+        "fecha": "12.12.12",
+        "cliente": "ca",
+        "estado": "completado",
+        "id": 35,
+        "productos": [
+            {
+                "descripcion": "Switch Red, retroiluminación multicolor",
+                "precio": 159,
+                "id": 2,
+                "nombre": "Teclado Mecánico RGB"
+            },
+            {
+                "descripcion": "Cancelación de ruido, batería 30h",
+                "precio": 129.99,
+                "id": 4,
+                "nombre": "Audífonos Bluetooth"
+            }
+        ]
+    },
+    {
+        "fecha": "26.12.25",
+        "cliente": "laura",
+        "estado": "pendiente",
+        "id": 38,
+        "productos": [
+            {
+                "descripcion": "Switch Red, retroiluminación multicolor",
+                "precio": 159,
+                "id": 2,
+                "nombre": "Teclado Mecánico RGB"
+            },
+            {
+                "descripcion": "8000 DPI, batería recargable",
+                "precio": 75.9,
+                "id": 3,
+                "nombre": "Mouse Inalámbrico"
+            },
+            {
+                "descripcion": "gaimer",
+                "precio": 250,
+                "id": 25,
+                "nombre": "laptop gaimer"
+            }
+        ]
+    },
+    {
+        "fecha": "12.11.2024",
+        "cliente": "carlos gutierrez",
+        "estado": "pendiente",
+        "id": 44,
+        "productos": [
+            {
+                "descripcion": "8000 DPI, batería recargable",
+                "precio": 75.9,
+                "id": 3,
+                "nombre": "Mouse Inalámbrico"
+            },
+            {
+                "descripcion": "Switch Red, retroiluminación multicolor",
+                "precio": 159,
+                "id": 2,
+                "nombre": "Teclado Mecánico RGB"
+            },
+            {
+                "descripcion": "gaimer",
+                "precio": 250,
+                "id": 25,
+                "nombre": "laptop gaimer"
+            }
+        ]
+    },
+    {
+        "fecha": "30.11.25",
+        "cliente": "alex",
+        "estado": "pendiente",
+        "id": 54,
+        "productos": [
+            {
+                "descripcion": "8000 DPI, batería recargable",
+                "precio": 75.9,
+                "id": 3,
+                "nombre": "Mouse Inalámbrico"
+            },
+            {
+                "descripcion": "Switch Red, retroiluminación multicolor",
+                "precio": 159,
+                "id": 2,
+                "nombre": "Teclado Mecánico RGB"
+            },
+            {
+                "descripcion": "gaimer",
+                "precio": 250,
+                "id": 25,
+                "nombre": "laptop gaimer"
+            },
+            {
+                "descripcion": "simple y comodo",
+                "precio": 50,
+                "id": 20,
+                "nombre": "teclado de menbrana"
+            }
+        ]
+    },
+    {
+        "fecha": "12.11.2012",
+        "cliente": "Juan Carlos",
+        "estado": "pendiente",
+        "id": 56,
+        "productos": [
+            {
+                "descripcion": "Switch Red, retroiluminación multicolor",
+                "precio": 159,
+                "id": 2,
+                "nombre": "Teclado Mecánico RGB"
+            },
+            {
+                "descripcion": "8000 DPI, batería recargable",
+                "precio": 75.9,
+                "id": 3,
+                "nombre": "Mouse Inalámbrico"
+            },
+            {
+                "descripcion": "Full HD, 75Hz",
+                "precio": 499,
+                "id": 5,
+                "nombre": "Monitor LED 24''"
+            }
+        ]
+    },
+    {
+        "fecha": "12.25.1",
+        "cliente": "daniel",
+        "estado": "pendiente",
+        "id": 58,
+        "productos": [{
+            "descripcion": "simple y comodo",
+            "precio": 50,
+            "id": 20,
+            "nombre": "teclado de menbrana"
+        }]
+    },
+    {
+        "fecha": "11.05.2026",
+        "cliente": "carlos daniel",
+        "estado": "pendiente",
+        "id": 322,
+        "productos": [
+            {
+                "descripcion": "Switch Red, retroiluminación multicolor",
+                "precio": 159,
+                "id": 2,
+                "nombre": "Teclado Mecánico RGB"
+            },
+            {
+                "descripcion": "Full HD, 75Hz",
+                "precio": 499,
+                "id": 5,
+                "nombre": "Monitor LED 24''"
+            },
+            {
+                "descripcion": "gaimer",
+                "precio": 250,
+                "id": 25,
+                "nombre": "laptop gaimer"
+            },
+            {
+                "descripcion": "Switch Red, retroiluminación multicolor",
+                "precio": 159,
+                "id": 2,
+                "nombre": "Teclado Mecánico RGB"
+            },
+            {
+                "descripcion": "Switch Red, retroiluminación multicolor",
+                "precio": 159,
+                "id": 2,
+                "nombre": "Teclado Mecánico RGB"
+            }
+        ]
+    },
+    {
+        "fecha": "12.11.12",
+        "cliente": "carlos_daniel",
+        "estado": "pendiente",
+        "id": 122333,
+        "productos": [
+            {
+                "descripcion": "gaimer",
+                "precio": 250,
+                "id": 25,
+                "nombre": "laptop gaimer"
+            },
+            {
+                "descripcion": "Cancelación de ruido, batería 30h",
+                "precio": 129.99,
+                "id": 4,
+                "nombre": "Audífonos Bluetooth"
+            }
+        ]
+    }
+]
