@@ -1,0 +1,13 @@
+2026-06-07 15:55:11,901 INFO  controladores.PedidoController - Pedidos cargados correctamente
+2026-06-07 15:55:11,906 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-07 15:55:21,690 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-07 15:56:10,764 INFO  controladores.PedidoController - Pedido registrado correctamente: 111
+2026-06-07 15:56:10,767 INFO  controladores.TareaController - Tarea creada 1
+2026-06-07 15:56:14,734 INFO  controladores.PedidoController - Pedidos cargados correctamente
+2026-06-07 15:56:28,368 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-07 15:56:37,139 INFO  controladores.TareaController - Tarea procesada
+2026-06-07 15:56:43,786 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-07 15:56:58,873 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-07 15:57:00,880 INFO  controladores.PedidoController - Pedidos cargados correctamente
+2026-06-07 15:57:00,880 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-07 15:57:06,243 INFO  controladores.PedidoController - Pedidos cargados correctamente

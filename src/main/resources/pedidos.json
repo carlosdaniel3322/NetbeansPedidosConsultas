@@ -225,6 +225,38 @@
         }]
     },
     {
+        "fecha": "12/02/23",
+        "cliente": "carlos daniel velasquez",
+        "estado": "en proceso",
+        "id": 111,
+        "productos": [
+            {
+                "descripcion": "8000 DPI, batería recargable",
+                "precio": 75.9,
+                "id": 3,
+                "nombre": "Mouse Inalámbrico"
+            },
+            {
+                "descripcion": "gaimer",
+                "precio": 250,
+                "id": 25,
+                "nombre": "laptop gaimer"
+            },
+            {
+                "descripcion": "Full HD, 75Hz",
+                "precio": 499,
+                "id": 5,
+                "nombre": "Monitor LED 24''"
+            },
+            {
+                "descripcion": "8000 DPI, batería recargable",
+                "precio": 75.9,
+                "id": 3,
+                "nombre": "Mouse Inalámbrico"
+            }
+        ]
+    },
+    {
         "fecha": "11.05.2026",
         "cliente": "carlos daniel",
         "estado": "pendiente",
