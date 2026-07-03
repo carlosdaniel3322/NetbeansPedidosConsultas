@@ -1,43 +1,39 @@
 package vista;
 
+import controladores.ProductoController;
 import javax.swing.JFrame;
 import modelo.Producto;
-import persistencia.ManejadorArchivos;
 import tads.ListaDoble;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import modelo.ArregloProductos;
 
 public class VentanaProductos extends JFrame {
-    
+
+    private final ProductoController controller;
     private ListaDoble lista;
     private Producto[] productos;
-
     private JTextArea areaTexto;
 
     public VentanaProductos() {
-        setTitle("Gestión de Productos");
+        controller = new ProductoController();
+
+        setTitle("Gestion de Productos");
         setSize(600, 400);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // cargar datos
-        lista = new ListaDoble();
-        productos = ManejadorArchivos.leerProductos();
-        for (Producto p : productos)
-            lista.insertar(p);
+        cargarDatos();
 
-        // Panel de botones
         JPanel panelBotones = new JPanel(new GridLayout(6, 1, 5, 5));
 
         JButton btnMostrar = new JButton("Mostrar productos");
         JButton btnAgregar = new JButton("Agregar producto");
         JButton btnBuscar = new JButton("Buscar producto");
         JButton btnEliminar = new JButton("Eliminar producto");
-        JButton btnAtras = new JButton("Mostrar hacia atrás");
+        JButton btnAtras = new JButton("Mostrar hacia atras");
         JButton btnSalir = new JButton("Salir");
 
         panelBotones.add(btnMostrar);
@@ -49,77 +45,85 @@ public class VentanaProductos extends JFrame {
 
         add(panelBotones, BorderLayout.WEST);
 
-        // Panel de texto
         areaTexto = new JTextArea();
         areaTexto.setEditable(false);
         add(new JScrollPane(areaTexto), BorderLayout.CENTER);
 
-
-        // 1. Mostrar adelante
-        btnMostrar.addActionListener((ActionEvent e) -> {
-            areaTexto.setText("");
-            lista.mostrarAdelanteTexto(areaTexto);
-        });
-
-        // 2. Agregar
+        btnMostrar.addActionListener((ActionEvent e) -> mostrarAdelante());
         btnAgregar.addActionListener(e -> agregarProducto());
-
-        // 3. Buscar
         btnBuscar.addActionListener(e -> buscarProducto());
-
-        // 4. Eliminar
         btnEliminar.addActionListener(e -> eliminarProducto());
+        btnAtras.addActionListener(e -> mostrarAtras());
+        btnSalir.addActionListener(e -> dispose());
+    }
 
-        // 5. Mostrar hacia atrás
-        btnAtras.addActionListener(e -> {
-            areaTexto.setText("");
-            lista.mostrarAtrasTexto(areaTexto);
-        });
+    private void cargarDatos() {
+        productos = controller.obtenerProductosComoArreglo();
+        lista = controller.getListaProductos();
+    }
 
-        // 6. Salir
-        btnSalir.addActionListener(e -> System.exit(0));
+    private void mostrarAdelante() {
+        cargarDatos();
+        areaTexto.setText("");
+        lista.mostrarAdelanteTexto(areaTexto);
+    }
+
+    private void mostrarAtras() {
+        cargarDatos();
+        areaTexto.setText("");
+        lista.mostrarAtrasTexto(areaTexto);
     }
 
     private void agregarProducto() {
         try {
             int id = Integer.parseInt(JOptionPane.showInputDialog("ID:"));
             String nombre = JOptionPane.showInputDialog("Nombre:");
-            String desc = JOptionPane.showInputDialog("Descripción:");
+            String desc = JOptionPane.showInputDialog("Descripcion:");
             double precio = Double.parseDouble(JOptionPane.showInputDialog("Precio:"));
 
-            Producto nuevo = new Producto(id, nombre, desc, precio);
-            lista.insertar(nuevo);
+            boolean ok = controller.registrarProducto(id, nombre, desc, precio);
+            if (!ok) {
+                JOptionPane.showMessageDialog(this, "No se pudo agregar. Verifica datos o ID duplicado.");
+                return;
+            }
 
-            productos = ArregloProductos.agregar(productos, nuevo);
-            ManejadorArchivos.guardarProductos(productos);
-
-            JOptionPane.showMessageDialog(this, "Producto agregado.");
+            cargarDatos();
+            JOptionPane.showMessageDialog(this, "Producto agregado en PostgreSQL.");
+            mostrarAdelante();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Error en los datos.");
         }
     }
 
     private void buscarProducto() {
-        int id = Integer.parseInt(JOptionPane.showInputDialog("ID a buscar:"));
-        Producto p = lista.buscar(id);
+        try {
+            int id = Integer.parseInt(JOptionPane.showInputDialog("ID a buscar:"));
+            Producto p = controller.buscarProducto(id);
 
-        if (p != null)
-            JOptionPane.showMessageDialog(this, "Encontrado:\n" + p);
-        else
-            JOptionPane.showMessageDialog(this, "Producto no encontrado.");
-    }
-
-    private void eliminarProducto() {
-        int id = Integer.parseInt(JOptionPane.showInputDialog("ID a eliminar:"));
-        boolean eliminado = lista.eliminar(id);
-
-        if (eliminado) {
-            productos = ArregloProductos.eliminar(productos, id);
-            ManejadorArchivos.guardarProductos(productos);
-            JOptionPane.showMessageDialog(this, "Producto eliminado.");
-        } else {
-            JOptionPane.showMessageDialog(this, "No existe el producto.");
+            if (p != null) {
+                JOptionPane.showMessageDialog(this, "Encontrado:\n" + p);
+            } else {
+                JOptionPane.showMessageDialog(this, "Producto no encontrado.");
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "ID invalido.");
         }
     }
 
+    private void eliminarProducto() {
+        try {
+            int id = Integer.parseInt(JOptionPane.showInputDialog("ID a eliminar:"));
+            boolean eliminado = controller.eliminarProducto(id);
+
+            if (eliminado) {
+                cargarDatos();
+                JOptionPane.showMessageDialog(this, "Producto eliminado de PostgreSQL.");
+                mostrarAdelante();
+            } else {
+                JOptionPane.showMessageDialog(this, "No existe el producto o esta asociado a un pedido.");
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "ID invalido.");
+        }
+    }
 }

@@ -11,3 +11,24 @@
 2026-06-07 15:57:00,880 INFO  controladores.PedidoController - Pedidos cargados correctamente
 2026-06-07 15:57:00,880 INFO  controladores.TareaController - Tareas cargadas correctamente
 2026-06-07 15:57:06,243 INFO  controladores.PedidoController - Pedidos cargados correctamente
+2026-06-08 22:47:51,498 INFO  controladores.PedidoController - Pedidos cargados correctamente
+2026-06-08 22:47:51,503 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-08 22:48:10,173 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-08 22:48:14,275 INFO  controladores.PedidoController - Pedidos cargados correctamente
+2026-06-09 15:16:04,342 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-09 15:16:10,305 INFO  controladores.PedidoController - Pedidos cargados correctamente
+2026-06-09 15:16:10,306 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-09 15:16:14,526 INFO  controladores.PedidoController - Pedidos cargados correctamente
+2026-06-09 15:16:23,499 INFO  controladores.PedidoController - Pedidos cargados correctamente
+2026-06-09 15:16:23,500 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-27 08:33:09,575 INFO  controladores.TareaController - Tareas cargadas correctamente
+2026-06-27 10:02:42,530 INFO  controladores.PedidoController - Pedidos cargados desde PostgreSQL
+2026-06-27 10:02:42,727 INFO  controladores.TareaController - Tareas cargadas desde PostgreSQL
+2026-06-27 10:03:10,108 INFO  controladores.PedidoController - Pedido registrado correctamente: 1
+2026-06-27 10:03:10,234 INFO  controladores.TareaController - Tarea creada 1
+2026-06-27 10:03:17,638 INFO  controladores.PedidoController - Pedidos cargados desde PostgreSQL
+2026-06-27 10:03:21,610 INFO  controladores.TareaController - Tareas cargadas desde PostgreSQL
+2026-06-27 10:03:24,735 INFO  controladores.TareaController - Tarea procesada
+2026-06-27 10:03:32,952 INFO  controladores.PedidoController - Pedidos cargados desde PostgreSQL
+2026-06-27 10:03:38,081 INFO  controladores.TareaController - Tareas cargadas desde PostgreSQL
+2026-06-27 10:03:40,513 INFO  controladores.PedidoController - Pedidos cargados desde PostgreSQL

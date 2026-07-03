@@ -11,13 +11,13 @@
         <exec.mainClass>vista.FrmPrincipal</exec.mainClass>
     </properties>
     <dependencies>
-        <!-- Librería org.json para manejar JSON -->
+        <!-- LibrerÃ­a org.json para manejar JSON -->
          <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20240303</version>
         </dependency>
-        <!-- Librería Gson para manejar JSON -->
+        <!-- LibrerÃ­a Gson para manejar JSON -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -40,6 +40,9 @@
     <artifactId>logback-classic</artifactId>
     <version>1.5.18</version>
 </dependency>
-       
-    </dependencies>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.4</version>
+        </dependency>    </dependencies>
 </project>
