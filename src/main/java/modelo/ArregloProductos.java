@@ -1,8 +1,4 @@
 package modelo;
-/**
- *
- * @author Admin
- */
 
 public class ArregloProductos {
     public static Producto[] agregar(Producto[] arr, Producto nuevo) {

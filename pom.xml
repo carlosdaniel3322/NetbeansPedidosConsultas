@@ -29,6 +29,14 @@
     <version>3.17.0</version>
 </dependency>
 
+<!-- JUnit 5 para pruebas unitarias -->
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter</artifactId>
+    <version>5.10.2</version>
+    <scope>test</scope>
+</dependency>
+
 <dependency>
     <groupId>com.google.guava</groupId>
     <artifactId>guava</artifactId>
@@ -45,4 +53,46 @@
             <artifactId>postgresql</artifactId>
             <version>42.7.4</version>
         </dependency>    </dependencies>
+
+ <build>
+    <plugins>
+
+        <!-- Ejecuta las pruebas -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.5</version>
+        </plugin>
+
+        <!-- Genera el reporte de cobertura -->
+        <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.12</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>prepare-agent</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>report</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>report</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+
+        <!-- Análisis de vulnerabilidades de dependencias -->
+        <plugin>
+            <groupId>org.owasp</groupId>
+            <artifactId>dependency-check-maven</artifactId>
+            <version>12.1.8</version>
+        </plugin>
+
+    </plugins>
+</build>
+
 </project>
